@@ -76,3 +76,4 @@ temp/
 .ipynb_checkpoints/
 build/
 dist/
+.claude/
