@@ -519,3 +519,11 @@ pip install mutagen
 ```
 
 Commit message: "feat: music tab full feature expansion — surprise me, templates, cover mode, seed explorer, mood compass, metadata, mixer, LoRA UI"
+
+## Related
+
+- [[SPRINT_VIDEO_CHAIN]]
+- [[SPRINT_ACESTEP]]
+- [[SPRINT_LUMINA_WORLD]]
+- [[Show_Style_Influences]]
+- [[The_Forty_Second_Sprint]]

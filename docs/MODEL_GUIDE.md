@@ -189,3 +189,5 @@ NeoVak auto-detects model types from names:
 - [[TTS_BACKENDS]]
 - [[NEOVAK_PHASE1]]
 - [[Foundation Canon]]
+- [[Satellite_Signal_Interception_Threat_Model]]
+

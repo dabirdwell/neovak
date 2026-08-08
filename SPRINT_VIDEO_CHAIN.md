@@ -286,3 +286,11 @@ Our current workflows output WebM (VP9). For concatenation, same-codec concat vi
 - [ ] Progress shows per-segment updates
 
 Commit message: "feat: video chain generation — last frame to first frame storyboarding"
+
+## Related
+
+- [[LTX2_Video_Generation]]
+- [[AI Tools Image Generation]]
+- [[SE_Post_Image_Generation_Spec]]
+- [[Hero_Video_Prompts_v2]]
+- [[First_Video_Opening_Statement]]

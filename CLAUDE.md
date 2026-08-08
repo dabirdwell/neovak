@@ -27,3 +27,11 @@ The sprint spec has **verified API formats** with actual response examples.
 - Python 3.11 available, venv at `./venv/`
 - ComfyUI backend at port 8188, ACE-Step at port 8001
 - ffmpeg installed at `/opt/homebrew/bin/ffmpeg`, symlinked into ACE-Step venv
+
+## Related
+
+- [[CLAUDE_CODE_PHASE1]]
+- [[SE_Post_Image_Generation_Spec]]
+- [[Remote_Claude_Code_Auth]]
+- [[Claude_AI_vs_Claude_Code_Decision_Guide]]
+- [[Claude_Code_Source_Brief_March2026]]

@@ -58,3 +58,7 @@ export ACESTEP_URL="http://127.0.0.1:8001"
 - 15s clip: ~12s (7.5s LM + 4.5s DiT)
 - 2min track: ~2-3min
 - Output: MP3, 48kHz, 128kbps
+
+## Related
+
+- [[Dual_Publishing_Setup]]

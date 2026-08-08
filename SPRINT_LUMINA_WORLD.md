@@ -366,3 +366,11 @@ Update to:
 - [ ] Empty states are consistent across all tabs
 
 Commit message: "feat: Lumina's World — unified theme, cross-tab enhancements, all media tabs upgraded"
+
+## Related
+
+- [[SPRINT_VIDEO_CHAIN]]
+- [[SPRINT_ENHANCEMENTS]]
+- [[Lumina_Whisper]]
+- [[Lumina's Whisper full 2]]
+- [[SPRINT_gallery_qc]]

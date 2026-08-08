@@ -472,3 +472,11 @@ The symlink in .venv/bin/ handles this when the server uses its own Python.
 - ACE-Step XL models (4B DiT) need ≥12GB VRAM — fine for Mac Studio, tight on MacBook Pro 16GB.
 - The REST API is async task-based (submit → poll), NOT streaming. Plan UI accordingly.
 - ACE-Step's `/format_input` endpoint is a killer feature — lets the LM "think" about the music before generating. This should be prominent in the UI.
+
+## Related
+
+- [[SE_Post_Image_Generation_Spec]]
+- [[Moltbook_Post_Community_Music]]
+- [[SPRINT_VIDEO_CHAIN]]
+- [[SPRINT_LUMINA_WORLD]]
+- [[SPRINT_ENHANCEMENTS]]
