@@ -1,0 +1,4 @@
+# Screen records, thumbnails, logs and test state stay on the Studio.
+state/
+__pycache__/
+screenshots/

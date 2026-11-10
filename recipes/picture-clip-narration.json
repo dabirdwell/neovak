@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "order": 1,
+  "name": "Picture, clip and narration",
+  "description": "Makes a picture, sets it moving, reads your words aloud, and joins them into one finished clip.",
+  "inputs": [
+    {"name": "picture", "label": "Describe the picture", "type": "long_text", "tier": "basic", "required": true,
+     "place": "A lighthouse at dusk, fog rolling in, one warm window"},
+    {"name": "motion", "label": "What moves in the clip", "type": "text", "tier": "basic", "required": true,
+     "place": "The fog drifts slowly, and the light in the window flickers"},
+    {"name": "words", "label": "Words to read aloud", "type": "long_text", "tier": "basic", "required": true,
+     "place": "Every night for forty years, someone climbed these stairs."},
+    {"name": "length", "label": "Length of the clip", "type": "choice", "tier": "advanced", "default": 5,
+     "help": "If the words run longer, the last frame holds until they finish.",
+     "choices": [{"value": 2, "label": "2 seconds"}, {"value": 5, "label": "5 seconds"}, {"value": 8, "label": "8 seconds"}]},
+    {"name": "voice", "label": "Voice", "type": "choice", "tier": "advanced", "default": "kokoro",
+     "choices": [{"value": "kokoro", "label": "Clear narrator"}, {"value": "chatterbox", "label": "Expressive"}, {"value": "csm-1b", "label": "Conversational"}]},
+    {"name": "under", "label": "The clip's own sound", "type": "choice", "tier": "advanced", "default": 0,
+     "choices": [{"value": 0, "label": "Voice only"}, {"value": 0.2, "label": "Quietly under the voice"}]},
+    {"name": "seed", "label": "Starting number", "type": "seed", "tier": "advanced", "default": null,
+     "help": "Leave blank for a new one. Every picture starts from a random number. The same number and words make the same picture again."}
+  ],
+  "steps": [
+    {"id": "picture", "label": "Make the picture", "adapter": "mflux", "about_seconds": 25,
+     "params": {"prompt": "{{picture}}", "model": "flux2-klein-4b", "size": "landscape", "style": "", "seed": "{{seed}}"}},
+    {"id": "clip", "label": "Set it moving", "adapter": "ltx-video", "about_seconds": 280,
+     "params": {"prompt": "{{motion}}", "source": "{{steps.picture.file}}", "seconds": "{{length}}", "seed": "{{seed}}"}},
+    {"id": "narration", "label": "Read the words", "adapter": "mlx-audio", "about_seconds": 8,
+     "params": {"text": "{{words}}", "voice": "{{voice}}"}},
+    {"id": "joined", "label": "Join picture and voice", "adapter": "join-sound", "about_seconds": 12,
+     "params": {"video": "{{steps.clip.file}}", "audio": "{{steps.narration.file}}", "keep_sound": "{{under}}"}}
+  ]
+}

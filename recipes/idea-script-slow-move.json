@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "order": 2,
+  "name": "From an idea to a narrated picture",
+  "description": "Writes a short script from your idea, makes a picture, moves slowly across it, and reads the script over the top.",
+  "inputs": [
+    {"name": "idea", "label": "What is it about?", "type": "long_text", "tier": "basic", "required": true,
+     "place": "Why a small town library keeps its doors open on the coldest night of the year"},
+    {"name": "picture", "label": "Describe the picture", "type": "long_text", "tier": "basic", "required": true,
+     "place": "A small brick library at night, snow falling, warm light in the windows"},
+    {"name": "tone", "label": "Tone of the script", "type": "choice", "tier": "advanced", "default": "warm",
+     "choices": [{"value": "plain", "label": "Plain"}, {"value": "warm", "label": "Warm"}, {"value": "serious", "label": "Serious"}, {"value": "playful", "label": "Playful"}]},
+    {"name": "direction", "label": "Which way the picture moves", "type": "choice", "tier": "advanced", "default": "in",
+     "choices": [{"value": "in", "label": "Move in"}, {"value": "out", "label": "Move out"}, {"value": "left", "label": "Drift left"}, {"value": "right", "label": "Drift right"}]},
+    {"name": "seed", "label": "Starting number", "type": "seed", "tier": "advanced",
+     "help": "Leave blank for a new one. Every picture starts from a random number. The same number and description make the same picture again."}
+  ],
+  "steps": [
+    {"id": "script", "label": "Write the script", "adapter": "local-text", "about_seconds": 230,
+     "params": {"task": "script", "brief": "{{idea}}", "length": 30, "tone": "{{tone}}"}},
+    {"id": "picture", "label": "Make the picture", "adapter": "mflux", "about_seconds": 25,
+     "params": {"prompt": "{{picture}}", "model": "flux2-klein-4b", "size": "landscape", "style": "", "seed": "{{seed}}"}},
+    {"id": "move", "label": "Move across it", "adapter": "motion", "about_seconds": 60,
+     "params": {"template": "move", "source": "{{steps.picture.file}}", "seconds": 20, "direction": "{{direction}}"}},
+    {"id": "narration", "label": "Read the script", "adapter": "mlx-audio", "about_seconds": 12,
+     "params": {"text": "{{steps.script.text}}", "voice": "kokoro"}},
+    {"id": "joined", "label": "Join picture and voice", "adapter": "join-sound", "about_seconds": 12,
+     "params": {"video": "{{steps.move.file}}", "audio": "{{steps.narration.file}}", "keep_sound": 0}}
+  ]
+}

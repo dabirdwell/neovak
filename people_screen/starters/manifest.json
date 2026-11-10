@@ -1,0 +1,394 @@
+{
+ "images": [
+  {
+   "id": "lighthouse",
+   "title": "A lighthouse at dusk",
+   "prompt": "A lighthouse at dusk, fog rolling in, one warm window lit at the top",
+   "size": "landscape",
+   "model": "z-image-turbo",
+   "file": "lighthouse.jpg",
+   "lift": "lighthouse.lift.webp",
+   "width": 1152,
+   "height": 896
+  },
+  {
+   "id": "beekeeper",
+   "title": "The beekeeper",
+   "prompt": "Portrait of an elderly beekeeper in a sunlit orchard, soft smile, bees drifting past, shallow depth of field",
+   "size": "portrait",
+   "model": "z-image-turbo",
+   "file": "beekeeper.jpg",
+   "lift": "beekeeper.lift.webp",
+   "width": 896,
+   "height": 1152
+  },
+  {
+   "id": "ramen",
+   "title": "Dinner, from above",
+   "prompt": "A bowl of ramen on a dark wood table, steam rising, moody overhead light, food photography",
+   "size": "square",
+   "model": "z-image-turbo",
+   "file": "ramen.jpg",
+   "lift": "ramen.lift.webp",
+   "width": 1024,
+   "height": 1024
+  },
+  {
+   "id": "cabin",
+   "title": "A cabin under the aurora",
+   "prompt": "A tiny cabin in a snowy pine forest at night, green aurora overhead, one lit window",
+   "size": "wide",
+   "model": "z-image-turbo",
+   "file": "cabin.jpg",
+   "lift": null,
+   "width": 1344,
+   "height": 768
+  },
+  {
+   "id": "motorcycle",
+   "title": "Desert, golden hour",
+   "prompt": "A vintage motorcycle parked on an empty desert road at golden hour, long shadows",
+   "size": "landscape",
+   "model": "z-image-turbo",
+   "file": "motorcycle.jpg",
+   "lift": "motorcycle.lift.webp",
+   "width": 1152,
+   "height": 896
+  },
+  {
+   "id": "teapot",
+   "title": "Rain at the window",
+   "prompt": "A glass teapot with a blooming flower tea on a windowsill, rain on the window behind it",
+   "size": "portrait",
+   "model": "z-image-turbo",
+   "file": "teapot.jpg",
+   "lift": "teapot.lift.webp",
+   "width": 896,
+   "height": 1152
+  },
+  {
+   "id": "mars",
+   "title": "A garden on Mars",
+   "prompt": "An astronaut tending tomatoes in a greenhouse terrace on Mars, warm morning light, red desert beyond the glass",
+   "size": "wide",
+   "model": "z-image-turbo",
+   "file": "mars.jpg",
+   "lift": "mars.lift.webp",
+   "width": 1344,
+   "height": 768
+  },
+  {
+   "id": "paperboat",
+   "title": "A flooded street",
+   "prompt": "A paper boat sailing down a flooded city street, reflections of shop signs in the water, evening",
+   "size": "landscape",
+   "model": "z-image-turbo",
+   "file": "paperboat.jpg",
+   "lift": "paperboat.lift.webp",
+   "width": 1152,
+   "height": 896
+  },
+  {
+   "id": "dancer",
+   "title": "Mid leap",
+   "prompt": "A ballet dancer caught mid leap in an empty warehouse, shafts of dusty light from high windows",
+   "size": "portrait",
+   "model": "z-image-turbo",
+   "file": "dancer.jpg",
+   "lift": "dancer.lift.webp",
+   "width": 896,
+   "height": 1152
+  },
+  {
+   "id": "bookshop",
+   "title": "The bookshop cat",
+   "prompt": "A cozy bookshop interior with a cat asleep on a stack of books, warm lamp light",
+   "size": "square",
+   "model": "z-image-turbo",
+   "file": "bookshop.jpg",
+   "lift": "bookshop.lift.webp",
+   "width": 1024,
+   "height": 1024
+  }
+ ],
+ "looks": [
+  {
+   "id": "film",
+   "title": "Film still",
+   "tail": "cinematic film still, soft key light, shallow depth of field, 35mm grain",
+   "prompt": "a small fox in a knitted scarf sitting on a stone wall at the edge of a village, cinematic film still, soft key light, shallow depth of field, 35mm grain",
+   "size": "square",
+   "model": "z-image-turbo",
+   "file": "look_film.jpg",
+   "lift": "look_film.lift.webp",
+   "width": 1024,
+   "height": 1024
+  },
+  {
+   "id": "watercolor",
+   "title": "Watercolor",
+   "tail": "loose watercolor painting on textured paper, soft washes, gentle bleeding edges",
+   "prompt": "a small fox in a knitted scarf sitting on a stone wall at the edge of a village, loose watercolor painting on textured paper, soft washes, gentle bleeding edges",
+   "size": "square",
+   "model": "z-image-turbo",
+   "file": "look_watercolor.jpg",
+   "lift": "look_watercolor.lift.webp",
+   "width": 1024,
+   "height": 1024
+  },
+  {
+   "id": "ink",
+   "title": "Ink drawing",
+   "tail": "black ink illustration, confident brush lines, cross hatching, white paper",
+   "prompt": "a small fox in a knitted scarf sitting on a stone wall at the edge of a village, black ink illustration, confident brush lines, cross hatching, white paper",
+   "size": "square",
+   "model": "z-image-turbo",
+   "file": "look_ink.jpg",
+   "lift": "look_ink.lift.webp",
+   "width": 1024,
+   "height": 1024
+  },
+  {
+   "id": "poster",
+   "title": "Travel poster",
+   "tail": "vintage travel poster, flat bold shapes, limited palette, 1950s lithograph",
+   "prompt": "a small fox in a knitted scarf sitting on a stone wall at the edge of a village, vintage travel poster, flat bold shapes, limited palette, 1950s lithograph",
+   "size": "square",
+   "model": "z-image-turbo",
+   "file": "look_poster.jpg",
+   "lift": "look_poster.lift.webp",
+   "width": 1024,
+   "height": 1024
+  },
+  {
+   "id": "clay",
+   "title": "Clay model",
+   "tail": "stop motion clay model, handmade, soft studio light, tiny fingerprints in the clay",
+   "prompt": "a small fox in a knitted scarf sitting on a stone wall at the edge of a village, stop motion clay model, handmade, soft studio light, tiny fingerprints in the clay",
+   "size": "square",
+   "model": "z-image-turbo",
+   "file": "look_clay.jpg",
+   "lift": "look_clay.lift.webp",
+   "width": 1024,
+   "height": 1024
+  },
+  {
+   "id": "paper",
+   "title": "Cut paper",
+   "tail": "layered cut paper collage, soft shadows between the layers, craft paper textures",
+   "prompt": "a small fox in a knitted scarf sitting on a stone wall at the edge of a village, layered cut paper collage, soft shadows between the layers, craft paper textures",
+   "size": "square",
+   "model": "z-image-turbo",
+   "file": "look_paper.jpg",
+   "lift": "look_paper.lift.webp",
+   "width": 1024,
+   "height": 1024
+  },
+  {
+   "id": "neon",
+   "title": "Neon night",
+   "tail": "neon lit night scene, wet reflections, teal and magenta glow",
+   "prompt": "a small fox in a knitted scarf sitting on a stone wall at the edge of a village, neon lit night scene, wet reflections, teal and magenta glow",
+   "size": "square",
+   "model": "z-image-turbo",
+   "file": "look_neon.jpg",
+   "lift": "look_neon.lift.webp",
+   "width": 1024,
+   "height": 1024
+  },
+  {
+   "id": "oil",
+   "title": "Oil painting",
+   "tail": "impressionist oil painting, thick visible brush strokes, warm afternoon light",
+   "prompt": "a small fox in a knitted scarf sitting on a stone wall at the edge of a village, impressionist oil painting, thick visible brush strokes, warm afternoon light",
+   "size": "square",
+   "model": "z-image-turbo",
+   "file": "look_oil.jpg",
+   "lift": "look_oil.lift.webp",
+   "width": 1024,
+   "height": 1024
+  },
+  {
+   "id": "pencil",
+   "title": "Colored pencil",
+   "tail": "colored pencil drawing, fine hatching, soft paper tooth, muted colors",
+   "prompt": "a small fox in a knitted scarf sitting on a stone wall at the edge of a village, colored pencil drawing, fine hatching, soft paper tooth, muted colors",
+   "size": "square",
+   "model": "z-image-turbo",
+   "file": "look_pencil.jpg",
+   "lift": "look_pencil.lift.webp",
+   "width": 1024,
+   "height": 1024
+  },
+  {
+   "id": "mono",
+   "title": "Black and white",
+   "tail": "black and white documentary photograph, deep contrast, natural light",
+   "prompt": "a small fox in a knitted scarf sitting on a stone wall at the edge of a village, black and white documentary photograph, deep contrast, natural light",
+   "size": "square",
+   "model": "z-image-turbo",
+   "file": "look_mono.jpg",
+   "lift": "look_mono.lift.webp",
+   "width": 1024,
+   "height": 1024
+  }
+ ],
+ "voices": [
+  {
+   "id": "kokoro",
+   "title": "Clear narrator",
+   "text": "Every picture you make here stays on this machine, and so does your voice.",
+   "file": "voice_kokoro.m4a"
+  },
+  {
+   "id": "chatterbox",
+   "title": "Expressive",
+   "text": "Every picture you make here stays on this machine, and so does your voice.",
+   "file": "voice_chatterbox.m4a"
+  },
+  {
+   "id": "csm-1b",
+   "title": "Conversational",
+   "text": "Every picture you make here stays on this machine, and so does your voice.",
+   "file": "voice_csm-1b.m4a"
+  },
+  {
+   "id": "qwen3-tts",
+   "title": "Described voice",
+   "text": "Every picture you make here stays on this machine, and so does your voice.",
+   "file": "voice_qwen3-tts.m4a"
+  },
+  {
+   "id": "soprano",
+   "title": "Quick and light",
+   "text": "Every picture you make here stays on this machine, and so does your voice.",
+   "file": "voice_soprano.m4a"
+  }
+ ],
+ "music": [
+  {
+   "id": "hopeful",
+   "title": "Hopeful piano",
+   "prompt": "Slow piano and soft strings, hopeful, unhurried",
+   "file": "music_hopeful.m4a"
+  },
+  {
+   "id": "lofi",
+   "title": "Late night",
+   "prompt": "Warm lo-fi beat with brushed drums and a mellow electric piano",
+   "file": "music_lofi.m4a"
+  },
+  {
+   "id": "rising",
+   "title": "Something big",
+   "prompt": "Big cinematic orchestra, rising brass and timpani, heroic",
+   "file": "music_rising.m4a"
+  },
+  {
+   "id": "porch",
+   "title": "Morning porch",
+   "prompt": "Gentle acoustic guitar and soft whistling, a slow morning on the porch",
+   "file": "music_porch.m4a"
+  }
+ ],
+ "video": [
+  {
+   "id": "cat",
+   "title": "The cat on the porch",
+   "prompt": "A tabby cat walks across a sunlit wooden porch, morning light, slow and calm",
+   "file": "clip_cat.mp4",
+   "poster": "clip_cat.jpg"
+  },
+  {
+   "id": "waves",
+   "title": "Waves at sunset",
+   "prompt": "Ocean waves rolling onto black sand at sunset, slow camera push, golden spray",
+   "file": "clip_waves.mp4",
+   "poster": "clip_waves.jpg"
+  },
+  {
+   "id": "coffee",
+   "title": "Steam and rain",
+   "prompt": "Steam curling from a cup of coffee by a rainy window, soft focus",
+   "file": "clip_coffee.mp4",
+   "poster": "clip_coffee.jpg"
+  },
+  {
+   "id": "lantern",
+   "title": "A lantern rising",
+   "prompt": "A paper lantern drifting up into a starry sky over a quiet lake, reflections in the water",
+   "file": "clip_lantern.mp4",
+   "poster": "clip_lantern.jpg"
+  }
+ ],
+ "animation": [
+  {
+   "id": "title",
+   "title": "Title card",
+   "template": "title",
+   "text": "The Long Way Home\nA film about staying",
+   "look": "night",
+   "font": "classic",
+   "file": "anim_title.mp4",
+   "poster": "anim_title.jpg"
+  },
+  {
+   "id": "strip",
+   "title": "Name strip",
+   "template": "strip",
+   "text": "Ada Lovelace\nMathematician",
+   "look": "paper",
+   "font": "clean",
+   "file": "anim_strip.mp4",
+   "poster": "anim_strip.jpg"
+  },
+  {
+   "id": "lines",
+   "title": "One line at a time",
+   "template": "lines",
+   "text": "First the light\nThen the sound\nThen the rest",
+   "look": "ember",
+   "font": "tall",
+   "file": "anim_lines.mp4",
+   "poster": "anim_lines.jpg"
+  },
+  {
+   "id": "move",
+   "title": "Slow move",
+   "template": "move",
+   "text": "",
+   "look": "studio",
+   "font": "clean",
+   "direction": "in",
+   "file": "anim_move.mp4",
+   "poster": "anim_move.jpg"
+  }
+ ],
+ "edit": [
+  {
+   "id": "cutout",
+   "title": "Remove the background",
+   "before": "edit_cutout_before.jpg",
+   "after": "edit_cutout.jpg"
+  },
+  {
+   "id": "bigger",
+   "title": "Make it bigger, up close",
+   "before": "edit_bigger_before.jpg",
+   "after": "edit_bigger.jpg"
+  },
+  {
+   "id": "change",
+   "title": "Change something",
+   "before": "edit_change_before.jpg",
+   "after": "edit_change.jpg"
+  },
+  {
+   "id": "faces",
+   "title": "Repair faces, up close",
+   "before": "edit_faces_before.jpg",
+   "after": "edit_faces.jpg"
+  }
+ ],
+ "writing": []
+}

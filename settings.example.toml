@@ -1,0 +1,40 @@
+# NeoVak settings. Plain paths for this Mac. Lines that start with # are notes.
+# A key that is left out keeps its default; run python3 -m neovak_queue.settings to see them all.
+
+[folders]
+output = "~/Documents/NeoVak"          # finished work goes here
+# state = ""                            # the engine's own records; the default is the code's state folder
+# screen_state = ""                     # the screen's own records
+
+[models]
+mflux = "~/.cache"                      # its huggingface subfolder is the Hugging Face cache
+video = ""                              # folder holding ltx-2.5-mlx-q8 and ltx-2.3-mlx-q8, if you have them
+added = "~/.cache/neovak-added"         # models added from the Models page
+roots = []                              # any other folders that hold weights
+
+[tools]
+music_python = ""                       # python3 of an mlx-audio environment, for music
+ltx = ""                                # the ltx-2-mlx command, for video clips
+face_python = ""                        # a python3 with torch and spandrel, for face repair
+gfpgan = ""                             # GFPGANv1.4.pth, for face repair
+vision = ""                             # leave empty: built from tools/vision_tool.swift when first needed
+ffmpeg = "/opt/homebrew/bin/ffmpeg"
+ffprobe = "/opt/homebrew/bin/ffprobe"
+
+[memory]
+governor = ""                           # a memory check script, or empty for the built-in simple check
+governor_python = "/opt/homebrew/bin/python3"
+reserve_gb = 4.0                        # always kept free on top of what a model needs
+
+[hold]
+start = ""                              # a daily window when no model may load, as "21:25"; empty for none
+end = ""
+zone = "America/Chicago"
+
+[hosts]
+engine = ["127.0.0.1", "localhost"]     # names the engine answers to; add a Tailscale address to reach it from other devices
+screen = ["127.0.0.1"]                  # addresses the screen listens on
+
+[writers]
+quick = ""                              # address of a running local text model, such as "http://127.0.0.1:8088"
+careful = ""

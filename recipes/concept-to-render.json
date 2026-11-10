@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "order": 3,
+  "name": "Concept to finished picture",
+  "description": "A writer turns your idea into a full description, one model draws it literally, a second refines it, and a third enlarges it.",
+  "inputs": [
+    {"name": "concept", "label": "Your idea", "type": "long_text", "tier": "basic", "required": true,
+     "place": "A hand painted sign outside a bakery that reads FRESH BREAD"},
+    {"name": "refine", "label": "How to refine it", "type": "long_text", "tier": "advanced",
+     "default": "Keep the composition and every word exactly as they are. Improve the lighting, the surfaces and the fine detail."},
+    {"name": "seed", "label": "Starting number", "type": "seed", "tier": "advanced",
+     "help": "Leave blank for a new one."}
+  ],
+  "steps": [
+    {"id": "interpret", "label": "Interpret the idea", "adapter": "local-text", "about_seconds": 80,
+     "params": {"task": "rewrite", "brief": "{{concept}}", "target": "image"}},
+    {"id": "literal", "label": "Draw it literally", "adapter": "mflux", "about_seconds": 520,
+     "params": {"prompt": "{{steps.interpret.text}}", "model": "qwen", "size": "landscape", "style": "", "seed": "{{seed}}"}},
+    {"id": "refine", "label": "Refine it", "adapter": "kontext", "about_seconds": 460,
+     "params": {"prompt": "{{refine}}", "source": "{{steps.literal.file}}", "seed": "{{seed}}"}},
+    {"id": "enlarge", "label": "Enlarge it", "adapter": "seedvr2", "about_seconds": 80,
+     "params": {"source": "{{steps.refine.file}}", "scale": 2, "seed": "{{seed}}"}}
+  ]
+}
