@@ -68,7 +68,11 @@ class Wiring(unittest.TestCase):
         # rest_server.py needs starlette and the parity script needs mflux; parse them at least.
         import ast
         for f in ("rest_server.py", "tests/s1_parity.py"):
-            ast.parse((REPO / f).read_text(), filename=f)
+            path = REPO / f
+            if not path.exists():
+                # The public copy leaves the parity script out: it drives one machine's own services.
+                continue
+            ast.parse(path.read_text(), filename=f)
 
     def test_switch_off_is_the_old_server(self):
         ns, tools = load({})
